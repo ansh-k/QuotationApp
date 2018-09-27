@@ -1,0 +1,3 @@
+$('#quote-title').text("<%= @quote.title%>");
+$('#quote-content').html("<%= strip_tags(@quote.content).strip%>");
+$('#quote-link').text("Source: <%= @quote.link%>");

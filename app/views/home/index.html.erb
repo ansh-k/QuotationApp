@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="page-header"><h1>Quote</h1></div>
+  <div class="jumbotron">
+    <h1 id="quote-title"><%= @quote.title.upcase %></h1> 
+    <h3 id="quote-content"><%= strip_tags(@quote.content) %></h3  >
+    <p id="quote-link"><%= "Source: #{@quote.link}" %></p>
+  </div>
+  <%= link_to "Next Quote", get_another_quote_path, id: "get-another-quote-button", type: "button", class: "btn btn-success btn-secondary center", remote: true%>
+</div>
